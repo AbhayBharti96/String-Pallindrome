@@ -1,0 +1,32 @@
+import java.util.*;
+class Abhay{
+    public static float Value(String a){
+        int x=0;
+        int y=0;
+        for(int i=0;i<a.length();i++){
+            char  dir = a.charAt(i);
+            if(dir =='N'){
+                y++;
+            }
+            else if(dir == 'S'){
+                y--;
+            }
+            else if(dir == 'E'){
+                x++;
+            }
+            else{
+                x--;
+            }
+            
+    }
+    int X = x*x;
+    int Y = y*y;
+    return (float)Math.sqrt(X+Y);
+}
+public static void main(String []args){
+    String a = "WNEENESENNN";
+    Abhay ab = new Abhay();
+    float x = ab.Value(a);
+    System.out.println("Shortest Distance is: "+x);
+}
+}
