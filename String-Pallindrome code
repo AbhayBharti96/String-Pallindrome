@@ -1,0 +1,25 @@
+import java.util.*;
+class Abhay{
+    public static boolean isPall(String str){
+        for(int i=0;i<str.length();i++){
+            int  n = str.length();
+            if(str.charAt(i)!= str.charAt(n-1-i)){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String []args){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the string to check the Pallindrome..");
+        String a = s.nextLine();
+       Abhay ab = new Abhay();
+      if(ab.isPall(a)==true){
+          System.out.println("IS pallindrome..");
+      }
+      else{
+           System.out.println("Not Pallindrome..");
+                }
+            }
+}
+          
